@@ -32,7 +32,7 @@ function CollectionSection() {
           variants={staggerContainer}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8"
         >
-                    {COLLECTION_PRODUCTS.map((product) => (
+          {COLLECTION_PRODUCTS.map((product) => (
             <motion.div key={product.id} variants={fadeUp}>
               <ProductCard product={product} />
             </motion.div>
