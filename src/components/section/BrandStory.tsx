@@ -30,13 +30,13 @@ export function BrandStory() {
                 className="text-display-md mb-8">
                 A Family recipe for
                 <br />
-                <p>the prefect evening.</p>
+                the prefect evening.
               </h1>
               <div className="space-y-8
                text-stone-600 mb-10">
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis ipsum odit reprehenderit tempore molestiae? Eius earum ut ipsa rerum maxime nobis dolorum rem, odit cum atque dolor, labore, perspiciatis magnam.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ratione alias iusto nisi unde laboriosam beatae laborum iste necessitatibus exercitationem voluptatibus inventore quod.</p>
-                <p className="text-center"><span className="font-bold">{"\"Bella Italia zaustavija vreme.\""}</span> - John Doe</p>
+                <p className="text-center"><span className="font-bold">{"\"Never Stop Learning.\""}</span> - John Doe</p>
               </div>
               <div className="flex justify-center">
                 <Button variant="ghost" className="border-b hover:opacity-50">

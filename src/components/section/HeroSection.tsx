@@ -48,7 +48,7 @@ export function HeroSection() {
             className="text-display-xl text-stone-300 mb-8">
             The Art of
             <br />
-            <p>Quiet Luxury</p>
+            Quiet Luxury
           </motion.h1>
 
           {/* Description */}
