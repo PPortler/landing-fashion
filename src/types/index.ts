@@ -13,3 +13,10 @@ export interface Product {
   image: string;
   tag?: string; // e.g. "New", "Bestseller"
 }
+
+// Gallery
+export interface GalleryImage {
+  id: string;
+  src: string;
+  label: string;
+}
