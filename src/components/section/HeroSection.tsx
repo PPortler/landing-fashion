@@ -4,10 +4,11 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import { fadeIn, fadeUp, slideInLeft, staggerContainer } from "@/lib/motion"
 import { Button } from "../ui/Button"
+import { SectionLabel } from "../ui/SectionLabel"
 
 export function HeroSection() {
   return (
-    <section className="min-h-screen flex flex-col justify-end">
+    <section id="home" className="min-h-screen flex flex-col justify-end">
       {/* Background image — full bleed */}
       <motion.div
         className="absolute inset-0"
@@ -16,7 +17,7 @@ export function HeroSection() {
         animate="visible"
       >
         <Image
-          src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1800&q=85"
+          src="/images/hero-section.jpg"
           alt="Hero background"
           fill
           priority
@@ -35,6 +36,12 @@ export function HeroSection() {
           animate="visible"
           className="max-w-3xl"
         >
+          <motion.p
+            variants={slideInLeft}
+          >
+            <SectionLabel className="text-stone-500">Spring / Summer 2026</SectionLabel>
+          </motion.p>
+
           {/* Title */}
           <motion.h1
             variants={slideInLeft}
@@ -47,7 +54,7 @@ export function HeroSection() {
           {/* Description */}
           <motion.p
             variants={fadeUp}
-            className=" text-stone-300 mb-10"
+            className=" text-stone-400 mb-10"
           >
             Refined essentials designed for the considered life.
             <br />

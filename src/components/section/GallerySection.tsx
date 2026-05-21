@@ -3,11 +3,9 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { fadeUp, staggerContainer } from "@/lib/motion";
-import { SectionLabel } from "../ui/SectionLabel";
-import { Button } from "../ui/Button";
 import { GALLERY_IMAGES } from "@/constants";
 import Image from "next/image";
-import { FadeInWhenVisible } from "../ui/FadeInWhenVisible";
+import { SectionHeader } from "../ui/SectionHeader";
 
 export function GallerySection() {
   const ref = useRef(null);
@@ -16,20 +14,7 @@ export function GallerySection() {
   return (
     <section id="gallery" className="py-24 md:py-36 px-6 md:px-12">
       <div className="max-w-screen-xl mx-auto">
-        {/* Section header */}
-        <FadeInWhenVisible
-          className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6"
-        >
-          <div>
-            <SectionLabel>Limited Gallery</SectionLabel>
-            <h2 className="text-display-md text-stone-900">
-              Gallery Highlights
-            </h2>
-          </div>
-          <Button variant="ghost">
-            View All →
-          </Button>
-        </FadeInWhenVisible>
+        <SectionHeader label="Limited Gallery" title="Gallery Highlights" />
         {/* Gallery */}
         <motion.div
           ref={ref}

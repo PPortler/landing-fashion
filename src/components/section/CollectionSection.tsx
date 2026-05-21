@@ -2,12 +2,10 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { SectionLabel } from "../ui/SectionLabel";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 import { COLLECTION_PRODUCTS } from "@/constants";
 import { ProductCard } from "../ui/ProductCard";
-import { Button } from "../ui/Button";
-import { FadeInWhenVisible } from "../ui/FadeInWhenVisible";
+import { SectionHeader } from "../ui/SectionHeader";
 
 export function CollectionSection() {
   const ref = useRef(null);
@@ -16,20 +14,7 @@ export function CollectionSection() {
   return (
     <section id="collection" className="py-24 md:py-36 px-6 md:px-12">
       <div className="max-w-screen-xl mx-auto">
-        {/* Section header */}
-        <FadeInWhenVisible
-          className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6"
-        >
-          <div>
-            <SectionLabel>New Collection</SectionLabel>
-            <h2 className="text-display-md text-stone-900">
-              Collection 2026
-            </h2>
-          </div>
-          <Button variant="ghost">
-            View All →
-          </Button>
-        </FadeInWhenVisible>
+        <SectionHeader label="New Collection" title="Collection 2026" />
 
         {/* Product grid */}
         <motion.div

@@ -16,7 +16,7 @@ export const COLLECTION_PRODUCTS: Product[] = [
     price: "€ 890",
     tag: "New",
     image:
-      "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=800&q=80",
+      "/images/collections/collection-1.jpg",
   },
   {
     id: "02",
@@ -25,7 +25,7 @@ export const COLLECTION_PRODUCTS: Product[] = [
     price: "€ 640",
     tag: "Bestseller",
     image:
-      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80",
+      "/images/collections/collection-2.jpg",
   },
   {
     id: "03",
@@ -33,7 +33,7 @@ export const COLLECTION_PRODUCTS: Product[] = [
     category: "Knitwear",
     price: "€ 420",
     image:
-      "https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=800&q=80",
+      "/images/collections/collection-3.jpg",
   },
   {
     id: "04",
@@ -41,39 +41,39 @@ export const COLLECTION_PRODUCTS: Product[] = [
     category: "Bottoms",
     price: "€ 380",
     image:
-      "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=800&q=80",
+      "/images/collections/collection-4.jpg",
   },
 ];
 
 export const GALLERY_IMAGES: GalleryImage[] = [
   {
     id: "g1",
-    src: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&q=80",
+    src: "/images/gallery/gallery-1.jpg",
     label: "Spring Lookbook",
   },
   {
     id: "g2",
-    src: "https://images.unsplash.com/photo-1521334884684-d80222895322?w=800&q=80",
+    src: "/images/gallery/gallery-2.jpg",
     label: "City Streets",
   },
   {
     id: "g3",
-    src: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=800&q=80",
+    src: "/images/gallery/gallery-3.jpg",
     label: "Evening Elegance",
   },
   {
     id: "g4",
-    src: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80",
+    src: "/images/gallery/gallery-4.jpg",
     label: "Weekend Casual",
   },  
   {
     id: "g5",
-    src: "https://images.unsplash.com/photo-1521334884684-d80222895322?w=800&q=80",
+    src: "/images/gallery/gallery-5.jpg",
     label: "Monochrome Magic",
   },
   {
     id: "g6",
-    src: "https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?w=800&q=80",
+    src: "/images/gallery/gallery-6.jpg",
     label: "Nature Escape",
   }
 ] 

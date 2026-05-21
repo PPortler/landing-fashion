@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="bg-stone-900 text-stone-400" id="contact">
+    <footer id="contact" className="bg-stone-900 text-stone-400">
       <div className="max-w-screen-xl mx-auto px-6 md:px-12 py-16 md:py-20">
 
         {/* Top */}

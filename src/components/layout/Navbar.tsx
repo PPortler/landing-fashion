@@ -29,8 +29,8 @@ export function Navbar() {
         <nav className="max-w-screen-xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
           {/* Logo */}
           <Link
-            href="/"
-            className="text-xl tracking-[0.15em] text-stone-900 cursor-pointer" 
+            href="#home"
+            className="font-display text-xl tracking-[0.15em] text-stone-900 cursor-pointer " 
           >
             MAISON
           </Link>

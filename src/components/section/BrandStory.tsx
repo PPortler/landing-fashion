@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { SectionLabel } from "../ui/SectionLabel";
 import { Button } from "../ui/Button";
@@ -14,7 +13,7 @@ export function BrandStory() {
           <FadeInWhenVisible>
             <div className="relative aspect-[4/5] overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=900&q=80"
+                src="/images/ceo.jpg"
                 alt="Maison atelier — Paris"
                 fill
                 className="object-cover"
