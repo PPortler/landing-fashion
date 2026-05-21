@@ -4,8 +4,7 @@ import type { GalleryImage, NavLink, Product } from "@/types";
 export const NAV_LINKS: NavLink[] = [
   { label: "Collection", href: "#collection" },
   { label: "Story", href: "#story" },
-  { label: "Lookbook", href: "#lookbook" },
-  { label: "Contact", href: "#contact" },
+  { label: "Gallery", href: "#gallery" },
 ];
 
 // Products 

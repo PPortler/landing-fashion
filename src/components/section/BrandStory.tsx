@@ -1,19 +1,17 @@
-"use client"
+"use client";
 
-import { fadeUp } from "@/lib/motion"
-import { motion } from "framer-motion"
-import Image from "next/image"
-import { SectionLabel } from "../ui/SectionLabel"
-import { Button } from "../ui/Button"
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { SectionLabel } from "../ui/SectionLabel";
+import { Button } from "../ui/Button";
+import { FadeInWhenVisible } from "../ui/FadeInWhenVisible";
 
-function BrandStory() {
+export function BrandStory() {
   return (
     <section id="story" className="py-24 md:py-36 bg-stone-100">
       <div className='max-w-screen-xl mx-auto px-6 md:px-12'>
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12 md:gap-20 mb-20">
-          <motion.div
-            variants={fadeUp}
-          >
+          <FadeInWhenVisible>
             <div className="relative aspect-[4/5] overflow-hidden">
               <Image
                 src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=900&q=80"
@@ -25,10 +23,8 @@ function BrandStory() {
               {/* Decorative frame offset */}
               <div className="absolute -bottom-4 -right-4 w-full h-full border border-stone-300 -z-10" />
             </div>
-          </motion.div>
-          <motion.div
-            variants={fadeUp}
-          >
+          </FadeInWhenVisible>
+          <FadeInWhenVisible delay={0.15}>
             <div>
               <SectionLabel>Our Story</SectionLabel>
               <h1
@@ -50,11 +46,9 @@ function BrandStory() {
               </div>
 
             </div>
-          </motion.div>
+          </FadeInWhenVisible>
         </div>
       </div>
     </section>
   )
 }
-
-export default BrandStory

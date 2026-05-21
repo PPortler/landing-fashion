@@ -5,7 +5,7 @@ import Image from "next/image"
 import { fadeIn, fadeUp, slideInLeft, staggerContainer } from "@/lib/motion"
 import { Button } from "../ui/Button"
 
-function HeroSection() {
+export function HeroSection() {
   return (
     <section className="min-h-screen flex flex-col justify-end">
       {/* Background image — full bleed */}
@@ -74,5 +74,3 @@ function HeroSection() {
     </section>
   )
 }
-
-export default HeroSection

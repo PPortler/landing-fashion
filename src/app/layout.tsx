@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Geist } from "next/font/google";
-import { cn } from "@/lib/utils";
+import { Footer } from "@/components/layout/Footer";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: "Landing Page - Premium Fashion",
@@ -18,10 +18,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={cn("font-sans", geist.variable)}>
+    <html lang="en" className={`font-sans ${geist.variable}`}>
       <body>
-        <Navbar/>
+        <Navbar />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

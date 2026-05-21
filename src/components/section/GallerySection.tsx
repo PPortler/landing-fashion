@@ -1,19 +1,23 @@
-"use client"
+"use client";
 
-import { slideInLeft, staggerContainer } from "@/lib/motion"
-import { motion } from "framer-motion"
-import { SectionLabel } from "../ui/SectionLabel"
-import { Button } from "../ui/Button"
-import { GALLERY_IMAGES } from "@/constants"
-import Image from "next/image"
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import { fadeUp, staggerContainer } from "@/lib/motion";
+import { SectionLabel } from "../ui/SectionLabel";
+import { Button } from "../ui/Button";
+import { GALLERY_IMAGES } from "@/constants";
+import Image from "next/image";
+import { FadeInWhenVisible } from "../ui/FadeInWhenVisible";
 
-function GallerySection() {
+export function GallerySection() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   return (
     <section id="gallery" className="py-24 md:py-36 px-6 md:px-12">
       <div className="max-w-screen-xl mx-auto">
         {/* Section header */}
-        <motion.div
-          variants={slideInLeft}
+        <FadeInWhenVisible
           className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6"
         >
           <div>
@@ -25,17 +29,19 @@ function GallerySection() {
           <Button variant="ghost">
             View All →
           </Button>
-        </motion.div>
+        </FadeInWhenVisible>
         {/* Gallery */}
         <motion.div
+          ref={ref}
           variants={staggerContainer}
           className="grid grid-cols-2 md:grid-cols-3 gap-2"
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
         >
           {GALLERY_IMAGES.map((item) => (
             <motion.div key={item.id}
+              variants={fadeUp}
               className="group relative overflow-hidden"
-              whileHover={{ y: -4 }}
-              transition={{ duration: 0.3 }}
             >
               <div className="relative aspect-square overflow-hidden">
                 <Image
@@ -70,8 +76,5 @@ function GallerySection() {
       </div>
 
     </section>
-
   )
 }
-
-export default GallerySection
